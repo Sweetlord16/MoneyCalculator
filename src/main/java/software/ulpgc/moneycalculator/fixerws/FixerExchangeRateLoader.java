@@ -22,7 +22,7 @@ public class FixerExchangeRateLoader implements ExchangeRateLoader {
         }
     }
     private String fetchExchangeRatesJson() throws IOException {
-        URL url = new URL("http://data.fixer.io/api/latest?access_key=" + FixerAPI.key);
+        URL url = new URL("https://cdn.moneyconvert.net/api/latest.json");
         try (InputStream is = url.openStream()) {
             return new String(is.readAllBytes());
         }

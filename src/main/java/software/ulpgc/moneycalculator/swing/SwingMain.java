@@ -30,7 +30,7 @@ public class SwingMain extends JFrame {
 
     public SwingMain() throws HeadlessException {
         this.setTitle("Money calculator");
-        this.setSize(800,150);
+        this.setSize(800,100);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
@@ -84,14 +84,14 @@ public class SwingMain extends JFrame {
     private void customizeAppearance() {
         //UIManager.put("nimbusBlueGrey", new Color(10, 150, 250));
 
-        this.getContentPane().setBackground(new Color(51, 153, 102));
+        this.getContentPane().setBackground(new Color(102, 204, 255)); // Cambié el color de fondo
 
-
-        Font newFont = new Font("Arial", Font.PLAIN, 14);
+        Font newFont = new Font("Times New Roman", Font.BOLD, 16); // Cambié la fuente y el tamaño
         UIManager.put("Label.font", newFont);
         UIManager.put("Button.font", newFont);
         UIManager.put("TextField.font", newFont);
         UIManager.put("ComboBox.font", newFont);
+
 
         SwingUtilities.updateComponentTreeUI(this);
     }
