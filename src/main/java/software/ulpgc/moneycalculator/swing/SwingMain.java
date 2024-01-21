@@ -38,11 +38,10 @@ public class SwingMain extends JFrame {
         this.add(createCurrencyDialog());
         this.add(createMoneyDisplay());
         this.add(toolbar());
-        customizeAppearance();
     }
 
     private Component toolbar() {
-        JButton button = new JButton("Exchange");
+        JButton button = new JButton("calculate");
         button.addActionListener(e -> commands.get("exchange money").execute());
         return button;
     }
@@ -79,20 +78,5 @@ public class SwingMain extends JFrame {
 
     private MoneyDialog moneyDialog() {
         return moneyDialog;
-    }
-
-    private void customizeAppearance() {
-        //UIManager.put("nimbusBlueGrey", new Color(10, 150, 250));
-
-        this.getContentPane().setBackground(new Color(102, 204, 255)); // Cambié el color de fondo
-
-        Font newFont = new Font("Times New Roman", Font.BOLD, 16); // Cambié la fuente y el tamaño
-        UIManager.put("Label.font", newFont);
-        UIManager.put("Button.font", newFont);
-        UIManager.put("TextField.font", newFont);
-        UIManager.put("ComboBox.font", newFont);
-
-
-        SwingUtilities.updateComponentTreeUI(this);
     }
 }
